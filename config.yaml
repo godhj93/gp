@@ -1,0 +1,38 @@
+#### Measurement 
+sensorNoise: 0.1
+inputDim: 1
+inputTruncation: 45.0
+#### Parameters for dividing GPs into subregions
+sectorlength: 1
+S: 5
+
+#### KL expansion parameters
+alpha: 0.69 #1.3
+
+#### Hilbert space approximation parameters
+boundaryL: 50
+numE: 100
+
+envConfig:
+  xmin: -5
+  xmax: 5
+  ymin: -5
+  ymax: 5
+  res: 51
+
+#### Kernel parameters
+covFunc:
+  # kernType: 'Matern'
+  kernType: 'SE'
+  # kernType: 'Laplace'
+  # kernType: 'GE'  
+  # kernType: 'RQ'  
+kernParams:
+  v: 1.0
+  l: 0.1 #1.0
+  strength: 1.0
+  gamma: 2
+  alpha: 5
+
+
+num_inducing_points: 2500
